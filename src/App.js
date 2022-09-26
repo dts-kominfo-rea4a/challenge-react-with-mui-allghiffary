@@ -16,6 +16,22 @@ const App = () => {
   // Buatlah handler untuk menambahkan kontak baru yang akan dikirim ke ContactForm
 
   const [data, setdata] = useState(contactsJSON);
+  const addData = (newName,newPhone,newEmail,newPhoto) => {
+    // Logic untuk membuat id terbaru
+    // ambil dari object paling akhir punya id, tambahkan 1
+
+    const objData = {
+      name: newName,
+      phone: newPhone,
+      email: newEmail,
+      photo: newPhoto
+    };
+
+    console.log(objData);
+
+    const newData = [...data, objData];
+    setdata(newData);
+  };
 
 
   return (
@@ -24,7 +40,7 @@ const App = () => {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2} columns={16}>
           <Grid item xs={8}>
-            <ContactForm />
+            <ContactForm fnAddData={addData}/>
           </Grid>
           <Grid item xs={8}>
             <Contact data={data}/>

@@ -15,7 +15,6 @@ import {
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
 const Contact = ({ data }) => {
-  console.log(data);
   // Contact berisi foto, nama, telepon, dan email
   return (
     <List sx={{ minWidth: 275, margin: "3rem", bgcolor: "#DBF6F0" }}>

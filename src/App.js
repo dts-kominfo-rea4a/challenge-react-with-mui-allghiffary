@@ -27,8 +27,6 @@ const App = () => {
       photo: newPhoto
     };
 
-    console.log(objData);
-
     const newData = [...data, objData];
     setdata(newData);
   };
